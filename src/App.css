@@ -1,5 +1,9 @@
 #root {
-  max-width: 1280px;
+  min-width: 900px;
+  min-height: 70vh;
+
+  background: #141623;
+  border-radius: 20px;
   margin: 0 auto;
   padding: 2rem;
   text-align: center;
@@ -12,4 +16,69 @@ ul {
 .todo-container {
   display: flex;
   gap: 1em;
+}
+
+h1 {
+  color: #eee;
+}
+
+.add-todo-bar {
+  all: unset;
+  height: 19px;
+  padding: 0.5em;
+
+  font-size: large;
+  font-weight: 600;
+
+  background: #141623;
+  border: 2px solid #34109a;
+  border-color: #34109a;
+  border-radius: 5px 0px 0px 5px;
+  color: #eee;
+}
+
+.add-todo-button {
+  color: #eee;
+  height: fit-content;
+  padding: 0.5em;
+
+  background: #34109a;
+  border-color: #34109a;
+
+  font-size: large;
+  font-weight: 600;
+
+  border-radius: 0px 5px 5px 0px;
+}
+
+.todo-list-container {
+  padding: 0px;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5em;
+}
+
+.todo-container {
+  width: 100%;
+  padding: 0.5em 0px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  color: #eee;
+  font-weight: 600;
+  background: #1691ff;
+
+  border-radius: 5px;
+}
+
+.todo-container p,div {
+  padding: 0px 2em;
+  font-size: 1.1rem;
+}
+
+.todo-buttons-container {
+  display: flex;
+  gap: 0.5em;
 }

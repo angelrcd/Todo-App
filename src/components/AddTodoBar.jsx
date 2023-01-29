@@ -12,8 +12,8 @@ export default function AddTodoBar({ addNewTodo }) {
 
   return (
     <>
-      <input value={todoBarValue} onChange={e => setTodoBarValue(e.target.value)} type="text" />
-      <button onClick={handleNewTodo}>Add Todo</button>
+      <input className='add-todo-bar' value={todoBarValue} onChange={e => setTodoBarValue(e.target.value)} type="text" />
+      <button className='add-todo-button' onClick={handleNewTodo}>Add Todo</button>
     </>
   )
 }
