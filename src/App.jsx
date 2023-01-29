@@ -19,6 +19,7 @@ function App() {
   }
 
   const deleteTodo =(position)=>{
+    console.log(position);
     const newTodoList = todoList.slice()
     newTodoList.splice(position, 1)
     setTodoList(newTodoList)

@@ -25,7 +25,11 @@ a:hover {
 }
 
 body {
-  background: #5152FF;
+  background: linear-gradient(
+    90deg,
+    rgba(48, 16, 255, 1) 0%,
+    rgba(100, 115, 255, 1) 100%
+  );
   margin: 0;
   display: flex;
   place-items: center;
