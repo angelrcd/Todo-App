@@ -99,6 +99,7 @@ li:nth-child(4n + 4) {
 .todo-container {
   width: 100%;
   padding: 0.5em 0px;
+  height: 60px;
 
   display: flex;
   justify-content: space-between;
@@ -132,5 +133,5 @@ li:nth-child(4n + 4) {
 }
 
 .ring {
-  background: red !important;
+  margin-left: 1em;
 }
