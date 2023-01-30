@@ -5,6 +5,7 @@ export default function TodoComponent({todo, updateTodo, deleteTodo ,position}) 
   const [currentText, setCurrentText] = useState(todo)
 
   const setEditable =()=>{
+    setCurrentText(todo)
     setIsBeingEdited(!isBeingEdited)
     updateTodo(currentText, position)
   }
@@ -18,8 +19,8 @@ export default function TodoComponent({todo, updateTodo, deleteTodo ,position}) 
       <input value={currentText} onChange={e => setCurrentText(e.target.value)} className={isBeingEdited ? "show" : "hidden"} type="text" />
       <p className={isBeingEdited ? "hidden" : "show"}>{todo}</p>
       <div className='todo-buttons-container'>
-        <button onClick={setEditable}>Update</button>
         <button className={isBeingEdited ? "hidden" : "show"} onClick={handleDelete}>Delete</button>
+        <button onClick={setEditable}>Update</button>
       </div>
       </li>
   )

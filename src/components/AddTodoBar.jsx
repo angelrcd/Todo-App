@@ -10,10 +10,16 @@ export default function AddTodoBar({ addNewTodo }) {
     setTodoBarValue("")
   }
 
+  const handleIntro = (e) => {
+    if(e.key == "Enter"){
+      handleNewTodo()
+    }
+  }
+
   return (
-    <>
-      <input className='add-todo-bar' value={todoBarValue} onChange={e => setTodoBarValue(e.target.value)} type="text" />
+    <div className='add-todo-bar-container'>
+      <input onKeyPress={e => handleIntro(e)} className='add-todo-bar' value={todoBarValue} onChange={e => setTodoBarValue(e.target.value)} type="text" />
       <button className='add-todo-button' onClick={handleNewTodo}>Add Todo</button>
-    </>
+    </div>
   )
 }

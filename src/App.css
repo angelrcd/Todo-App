@@ -1,5 +1,5 @@
 #root {
-  min-width: 900px;
+  min-width: 700px;
   min-height: 70vh;
 
   background: #141623;
@@ -29,34 +29,36 @@ h1 {
   display: block;
 }
 
+.add-todo-bar-container {
+  border: 2px solid #34109a;
+  margin: 0px auto;
+  width: fit-content;
+  padding: 0px;
+  border-radius: 8px;
+}
+
 .add-todo-bar {
   all: unset;
-  height: 19px;
-  padding: 0.5em;
-  text-align: left;
-
-  font-size: large;
-  font-weight: 600;
-
-  background: #141623;
-  border: 2px solid #34109a;
-  border-color: #34109a;
-  border-radius: 5px 0px 0px 5px;
+  background: transparent;
   color: #eee;
+  
+  text-align: left;
+  font-size: larger;
+  height: 100%;
+  border: none;
+  padding-left: 1.3em;
 }
 
 .add-todo-button {
   color: #eee;
-  height: fit-content;
-  padding: 0.5em;
-
-  background: #34109a;
-  border-color: #34109a;
-
-  font-size: large;
-  font-weight: 600;
-
-  border-radius: 0px 5px 5px 0px;
+  font-size: larger;
+  background: linear-gradient(
+    90deg,
+    #34109a 0%,
+    #8c00f7 100%
+  );
+  border-radius: 0px 6px 6px 0px;
+  border: none;
 }
 
 .todo-list-container {
