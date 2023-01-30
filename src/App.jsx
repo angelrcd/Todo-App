@@ -1,15 +1,17 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import './App.css'
 import AddTodoBar from './components/AddTodoBar'
 import TodoList from './components/TodoList'
 
+const store = window.localStorage
+const initial = store["todolist"] ?? "[]"
+
 function App() {
-  const [todoList, setTodoList] = useState([])
+  const [todoList, setTodoList] = useState(JSON.parse(initial))
 
   const addNewTodo =(newTodo)=>{
     const nextTodo = [...todoList, newTodo]
     setTodoList(nextTodo)
-    console.log(todoList);
   }
 
   const updateTodo =(newTodoText, position)=>{
@@ -24,6 +26,10 @@ function App() {
     newTodoList.splice(position, 1)
     setTodoList(newTodoList)
   }
+
+  useEffect(()=>{
+    store.setItem("todolist", JSON.stringify(todoList))
+  }, [todoList])
 
   return (
     <div className="App">
