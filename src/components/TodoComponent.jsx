@@ -26,13 +26,13 @@ export default function TodoComponent({todo, updateTodo, deleteTodo ,position}) 
   }
 
   return (
-    <li className={`todo-container ${isBeingEdited ? "ring" : ""}`}>
+    <div key={position} className={`todo-container ${isBeingEdited ? "ring" : ""}`}>
       <input ref={inputRef} onKeyPress={e => handleEnter(e)} value={currentText} onChange={e => setCurrentText(e.target.value)} className={isBeingEdited ? "show" : "hidden"} type="text" />
       <p className={isBeingEdited ? "hidden" : "show"}>{todo}</p>
       <div className='todo-buttons-container'>
         <button className={isBeingEdited ? "hidden" : "show"} onClick={handleDelete}>Delete</button>
         <button onClick={setEditable}>Update</button>
       </div>
-      </li>
+      </div>
   )
 }

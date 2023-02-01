@@ -18,7 +18,12 @@ export default function AddTodoBar({ addNewTodo }) {
 
   return (
     <div className='add-todo-bar-container'>
-      <input onKeyPress={e => handleEnter(e)} className='add-todo-bar' value={todoBarValue} onChange={e => setTodoBarValue(e.target.value)} type="text" />
+      <input 
+        onKeyPress={e => handleEnter(e)} 
+        className='add-todo-bar' value={todoBarValue} 
+        onChange={e => setTodoBarValue(e.target.value)} type="text"
+        aria-label="add new todo"
+      /> 
       <button className='add-todo-button' onClick={handleNewTodo}>Add Todo</button>
     </div>
   )
